@@ -25,6 +25,13 @@ namespace AddressBook
                     addressBookTwo.AddContact();
                     addressBookTwo.Display();
                     break;
+                case 3:
+                    AddressBook addressBookThree = new AddressBook();
+                    addressBookThree.AddContact();
+                    addressBookThree.Display();
+                    addressBookThree.EditContact();
+                    addressBookThree.Display();
+                    break;
                 default:
                     Console.WriteLine("Please enter a valid use case number!");
                     break;
