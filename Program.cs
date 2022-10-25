@@ -10,6 +10,7 @@ namespace AddressBook
             Console.WriteLine("Welcome to Address Book Program");
             Console.WriteLine("Use Case #1: Create a contact in Address Book");
             Console.WriteLine("Use Case #2: Add a new contact in Address Book");
+            Console.WriteLine("Use Case #3: Edit existing contact using name in Address Book");
 
             Console.Write("Choose a use case number to run the program: ");
             int choice = Convert.ToInt32(Console.ReadLine());
