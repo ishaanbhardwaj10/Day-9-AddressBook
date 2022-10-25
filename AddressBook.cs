@@ -55,6 +55,74 @@ namespace AddressBook
             addressBook[0] = contact;
         }
 
+        public void EditContact()
+        {
+
+            Console.WriteLine("Enter first name: ");
+            string fName = Console.ReadLine();
+            Console.WriteLine("Enter last name: ");
+            string lName = Console.ReadLine();
+
+            foreach (Contact contact in addressBook)
+            {
+                if (contact.FirstName == fName && contact.LastName == lName)
+                {
+                    Console.WriteLine("Select one of the edit options below:");
+                    Console.WriteLine("#1 - first name");
+                    Console.WriteLine("#2 - last name");
+                    Console.WriteLine("#3 - address");
+                    Console.WriteLine("#4 - city");
+                    Console.WriteLine("#5 - state");
+                    Console.WriteLine("#6 - zip");
+                    Console.WriteLine("#7 - phone number");
+                    Console.WriteLine("#8 - email");
+                    Console.WriteLine("Enter your choice: ");
+                    string choice = Console.ReadLine();
+
+                    switch (choice)
+                    {
+                        case "1":
+                            Console.WriteLine("Enter new first name: ");
+                            contact.FirstName = Console.ReadLine();
+                            break;
+                        case "2":
+                            Console.WriteLine("Enter new last name: ");
+                            contact.LastName = Console.ReadLine();
+                            break;
+                        case "3":
+                            Console.WriteLine("Enter new address: ");
+                            contact.Address = Console.ReadLine();
+                            break;
+                        case "4":
+                            Console.WriteLine("Enter new city: ");
+                            contact.City = Console.ReadLine();
+                            break;
+                        case "5":
+                            Console.WriteLine("Enter new state: ");
+                            contact.State = Console.ReadLine();
+                            break;
+                        case "6":
+                            Console.WriteLine("Enter new zip: ");
+                            contact.Zip = Console.ReadLine();
+                            break;
+                        case "7":
+                            Console.WriteLine("Enter new phone number: ");
+                            contact.PhoneNumber = Console.ReadLine();
+                            break;
+                        case "8":
+                            Console.WriteLine("Enter new email: ");
+                            contact.Email = Console.ReadLine();
+                            break;
+                        default:
+                            Console.WriteLine("Invalid option");
+                            break;
+                    }
+                }
+            }
+
+        }
+
+
         public void Display()
         {
             foreach (Contact contact in addressBook)
