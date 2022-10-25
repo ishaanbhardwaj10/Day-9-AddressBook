@@ -123,8 +123,32 @@ namespace AddressBook
         }
 
 
+        public void DeleteContact()
+        {
+            Console.WriteLine("Enter first name: ");
+            string fName = Console.ReadLine();
+            Console.WriteLine("Enter last name: ");
+            string lName = Console.ReadLine();
+
+            foreach (Contact contact in addressBook)
+            {
+                if (contact.FirstName == fName && contact.LastName == lName)
+                {
+                    addressBook[0] = null;
+                }
+            }
+        }
+
+
         public void Display()
         {
+            if (this.addressBook[0] == null)
+            {
+                Console.WriteLine("\t***\t");
+                Console.WriteLine("Address Book is empty!");
+                Console.WriteLine("\t***\t");
+                return;
+            }
             foreach (Contact contact in addressBook)
             {
                 Console.WriteLine("-----------------------------");
